@@ -91,5 +91,6 @@ resource "azurerm_linux_virtual_machine" "app_vm" {
     environment = "dev"
     #just a comment
     #just a comment2
+    #just a comment3
   }
 }
