@@ -45,7 +45,7 @@ resource "azurerm_network_interface" "app_ni" {
 
   ip_configuration {
     name                          = "app_ipconfig"
-    subnet_id                     = azurerm_subnet.project_subn.id
+    subnet_id                     = azurerm_subnet.app_subn.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.apppi.id
   }
@@ -61,7 +61,6 @@ resource "azurerm_linux_virtual_machine" "app_vm" {
   size           = "Standard_D2s_v3"
   computer_name  = "appvm"
   admin_username = "adminuser"
-  #admin_password = "password123!"
   network_interface_ids = [azurerm_network_interface.app_ni.id]
 
   os_disk {
