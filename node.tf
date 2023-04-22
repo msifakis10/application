@@ -90,5 +90,6 @@ resource "azurerm_linux_virtual_machine" "app_vm" {
   tags = {
     environment = "dev"
     #just a comment
+    #just a comment2
   }
 }
